@@ -13,10 +13,15 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>factorial</name>
 	<description>Factorial Metrics</description>
+
 	<properties>
 		<java.version>17</java.version>
 		<kotlin.version>1.9.21</kotlin.version>
+		<arrow.version>1.2.1</arrow.version>
+		<kotest.version>5.7.2</kotest.version>
+		<kotest.arrow.version>1.4.0</kotest.arrow.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -37,6 +42,31 @@
 		<dependency>
 			<groupId>org.jetbrains.kotlin</groupId>
 			<artifactId>kotlin-stdlib</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.arrow-kt</groupId>
+			<artifactId>arrow-core</artifactId>
+			<version>${arrow.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.kotest</groupId>
+			<artifactId>kotest-assertions-core-jvm</artifactId>
+			<version>${kotest.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.kotest</groupId>
+			<artifactId>kotest-property-jvm</artifactId>
+			<version>${kotest.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.kotest.extensions</groupId>
+			<artifactId>kotest-assertions-arrow-jvm</artifactId>
+			<version>${kotest.arrow.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
