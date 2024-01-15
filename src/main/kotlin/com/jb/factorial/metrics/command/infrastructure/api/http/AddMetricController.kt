@@ -17,15 +17,15 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
-private data class AddMetricRequest(val name: String, val timestamp: String, val value: Float)
-private data class AddMetricResponse(val id: String)
+data class AddMetricRequest(val name: String, val timestamp: String, val value: Float)
+data class AddMetricResponse(val id: String)
 
 @RestController
-private class AddMetricController(
+class AddMetricController(
     private val addMetricHandler: AddMetricHandler,
 ) {
 
-    @PostMapping("/metrics")
+    @PostMapping(URL)
     fun addMetric(@RequestBody request: AddMetricRequest): ResponseEntity<*> =
         parseCommand(request)
             .mapLeft(::BadRequestError)
@@ -55,6 +55,7 @@ private class AddMetricController(
     private fun parseValue(value: Float) = Value(value).right()
 
     companion object {
+        const val URL = "/metrics"
         private const val NAME_FIELD = "name"
         private const val TIMESTAMP_FIELD = "timestamp"
     }

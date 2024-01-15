@@ -21,6 +21,7 @@
 		<kotest.version>5.7.2</kotest.version>
 		<kotest.arrow.version>1.4.0</kotest.arrow.version>
 		<flyway.version>9.16.3</flyway.version>
+		<mockk-version>1.13.5</mockk-version>
 	</properties>
 
 	<dependencies>
@@ -84,6 +85,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.mockk</groupId>
+			<artifactId>mockk-jvm</artifactId>
+			<version>${mockk-version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
