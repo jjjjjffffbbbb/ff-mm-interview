@@ -20,6 +20,7 @@
 		<arrow.version>1.2.1</arrow.version>
 		<kotest.version>5.7.2</kotest.version>
 		<kotest.arrow.version>1.4.0</kotest.arrow.version>
+		<flyway.version>9.16.3</flyway.version>
 	</properties>
 
 	<dependencies>
@@ -48,6 +49,12 @@
 			<groupId>io.arrow-kt</groupId>
 			<artifactId>arrow-core</artifactId>
 			<version>${arrow.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>${flyway.version}</version>
 		</dependency>
 
 		<dependency>
