@@ -1,0 +1,53 @@
+server:
+  port: 8081
+  address: 0.0.0.0
+
+spring:
+  application:
+    name: factorial-metrics
+  datasource:
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:test;DB_CLOSE_ON_EXIT=FALSE;MODE=ORACLE;
+    hikari:
+      auto-commit: true
+      jdbc-url: ${spring.datasource.url}
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-test-query: SELECT 1 FROM DUAL
+      password: ${spring.datasource.password}
+      username: ${spring.datasource.username}
+    tomcat:
+      jmx-enabled: true
+  jpa:
+    properties:
+      hibernate:
+        show_sql: false
+        time_zone: UTC
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: true
+      hibernate.default_schema: METRICS
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+
+  boot:
+    admin:
+      client:
+        enabled: false
+      auto-registration: false
+  flyway:
+    schemas: METRICS
+    table: SCHEMA_VERSION
+    baseline-version: 0
+    baseline-on-migrate: true
+    clean-on-validation-error: false
+    clean-disabled: true
+    out-of-order: true
+    locations:
+      - classpath:db/migration
+      - classpath:db/populate
