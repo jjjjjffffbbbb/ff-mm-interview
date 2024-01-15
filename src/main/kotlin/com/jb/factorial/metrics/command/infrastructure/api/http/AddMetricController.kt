@@ -30,7 +30,7 @@ private class AddMetricController(
         parseCommand(request)
             .mapLeft(::BadRequestError)
             .map(addMetricHandler::handle)
-            .map { it.value }
+            .map { AddMetricResponse(it.value) }
             .fold(
                 ::from,
                 ::ok,
