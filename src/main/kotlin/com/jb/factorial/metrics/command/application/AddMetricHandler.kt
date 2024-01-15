@@ -6,8 +6,8 @@ import com.jb.factorial.metrics.command.domain.MetricRepository
 import com.jb.factorial.metrics.command.domain.Name
 import com.jb.factorial.metrics.command.domain.Timestamp
 import com.jb.factorial.metrics.command.domain.Value
+import jakarta.transaction.Transactional
 import org.springframework.stereotype.Component
-import org.springframework.transaction.annotation.Transactional
 
 data class AddMetric(val name: Name, val timestamp: Timestamp, val value: Value)
 
