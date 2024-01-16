@@ -25,6 +25,7 @@ spring:
       hibernate:
         show_sql: false
         time_zone: UTC
+        generate_statistics: false
       hibernate.cache.use_second_level_cache: false
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: true
@@ -51,3 +52,7 @@ spring:
     locations:
       - classpath:db/migration
       - classpath:db/populate
+
+logging:
+  level:
+    org.hibernate: ERROR
