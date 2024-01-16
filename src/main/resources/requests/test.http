@@ -1,0 +1,36 @@
+###
+
+POST localhost:8081/metrics
+Content-Type: application/json
+
+{
+  "name": "metric",
+  "timestamp": "2024-01-16T00:31:18.371+01:00",
+  "value": 1.0
+}
+
+###
+
+POST localhost:8081/metrics
+Content-Type: application/json
+
+{
+  "name": "aabcdf",
+  "timestamp": "2024-01-16T00:31:20.371+01:00",
+  "value": 3.0
+}
+
+###
+
+POST localhost:8081/metrics
+Content-Type: application/json
+
+{
+  "name": "aabcdf",
+  "timestamp": "2024-01-16T00:39:18.371+01:00",
+  "value": 3.0
+}
+
+###
+
+GET localhost:8081/metrics?groupBy=DAYS
