@@ -7,10 +7,8 @@ export default (http) => {
            value
         });
 
-        http.post("/metrics", mapToRequest())
-            .then(response => response.json)
-            .then(data => console.log(data));
-
+        return http.post("/metrics", mapToRequest())
+            .then(response => response.json())
     }
 
     return {
