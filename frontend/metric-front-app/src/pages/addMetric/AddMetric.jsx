@@ -33,6 +33,10 @@ const AddMetric = props => {
         form.setErrors(errors);
     };
 
+    const addDefaults = () => {
+        repository.addDefaults();
+    }
+
     return (
         <>
             <div className="container">
@@ -52,6 +56,8 @@ const AddMetric = props => {
 
                     {form.feedBack !== '' && <p>{form.feedBack}</p>}
                 </div>
+                <hr/>
+                <button onClick={() => addDefaults()}>Add defaults values</button>
             </div>
         </>
     );

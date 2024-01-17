@@ -11,7 +11,12 @@ export default (http) => {
             .then(response => response.json())
     }
 
+    const addDefaults = () => {
+        return http.post("/testing/add-default-metrics")
+    }
+
     return {
         addMetric,
+        addDefaults,
     }
 }
