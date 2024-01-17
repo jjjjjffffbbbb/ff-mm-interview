@@ -34,3 +34,7 @@ Content-Type: application/json
 ###
 
 GET localhost:8081/metrics?groupBy=DAYS
+
+###
+
+POST localhost:8081/testing/add-default-metrics
