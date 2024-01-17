@@ -1,6 +1,6 @@
 import {Route, Routes} from 'react-router-dom';
 import Sidebar from "./sidebar/Sidebar.jsx";
-import AddMetric from "./pages/addMetric/AddMetric.jsx";
+import AddMetric from "./pages/addMetric/index.js";
 import SeeMetrics from "./pages/seeMetrics/SeeMetrics.jsx";
 
 function App() {

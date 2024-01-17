@@ -8,11 +8,10 @@ import com.jb.factorial.metrics.command.domain.Name
 import com.jb.factorial.metrics.command.domain.Timestamp
 import com.jb.factorial.metrics.command.domain.Value
 import com.jb.factorial.metrics.sharedkernel.http.BadRequestError
-import com.jb.factorial.metrics.sharedkernel.http.EntityResponses
 import com.jb.factorial.metrics.sharedkernel.http.EntityResponses.from
 import com.jb.factorial.metrics.sharedkernel.http.RequestMalformedError
 import org.springframework.http.ResponseEntity
-import org.springframework.http.ResponseEntity.*
+import org.springframework.http.ResponseEntity.ok
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
