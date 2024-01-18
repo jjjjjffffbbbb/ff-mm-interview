@@ -26,7 +26,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -82,4 +81,10 @@ input[type=text] {
   padding: 12px 20px;
   box-sizing: border-box;
   margin-bottom: 1em;
+}
+
+canvas {
+  margin-top: 2em;
+  display: flex;
+  flex: 1;
 }
